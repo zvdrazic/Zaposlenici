@@ -24,7 +24,7 @@ namespace Zaposlenici.Controllers
         public async Task<IActionResult> Index(string searchString)
         {
             ViewData["CurrentFilter"] = searchString;
-            var zapl = from zp in _context.zaposlenik
+            var zapl = from zp in _context.Zaposlenik
                        select zp;
             if (!String.IsNullOrEmpty(searchString))
             {
